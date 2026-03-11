@@ -66,7 +66,6 @@ nav a:hover{
 .clip-box:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 15px #9146FF;
-
 }
 
 .twitch-link{
@@ -75,13 +74,14 @@ margin-top:15px;
 }
 
 h1{
-text-align:center;
-margin-top:30px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 h2{
-margin-top:20px;
+    margin-top: 20px;
 }
+
 
 form{
 max-width:400px;
@@ -107,4 +107,32 @@ cursor:pointer;
 
 button:hover{
 background:#772ce8;
+}
+
+.about{
+margin-top:40px;
+text-align:center;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.twitch-button{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#9146FF;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.twitch-button:hover{
+background:#772ce8;
+}
+
+button:hover{
+transform:scale(1.05);
+transition:0.2s;
 }
