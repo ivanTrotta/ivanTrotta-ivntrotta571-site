@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Contatti</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
+    <head>
+        <title>Contattami</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-  <body>
+    <body>
 
-    <h1>Contattami</h1>
+        <h1>Contattami</h1>
 
-    <p>Se vuoi collaborare con me o scrivermi un messaggio puoi farlo qui.</p>
+        <p>Se vuoi collaborare con me o mandarmi un messaggio puoi scrivermi qui.</p>
 
-    <h2>Email</h2>
-    <p>ivantrotta8@gmail.com</p>
+        <form>
 
-    <h2>Twitch</h2>
-    <a href="https://www.twitch.tv/ivantrotta571" target="_blank">
-      Vai al mio canale Twitch
-    </a>
+            <label>Nome</label><br>
+            <input type="text" name="nome"><br><br>
 
-    <h2>Discord</h2>
-    <p>In arrivo...</p>
-    
-  </body>
+            <label>Email</label><br>
+            <input type="email" name="email"><br><br>
+
+            <label>Messaggio</label><br>
+            <textarea name="messaggio" rows="5"></textarea><br><br>
+
+            <button type="submit">Invia</button>
+
+        </form>
+        
+    </body>
 </html>
