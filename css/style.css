@@ -136,3 +136,18 @@ button:hover{
 transform:scale(1.05);
 transition:0.2s;
 }
+
+.discord-button{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#5865F2;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.discord-button:hover{
+background:#4752c4;
+}
