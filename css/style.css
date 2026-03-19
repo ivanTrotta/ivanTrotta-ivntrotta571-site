@@ -162,3 +162,38 @@ background:#111;
 padding:20px;
 border-radius:10px;
 }
+
+/* ===== EFFETTI GLOW STREAM E CHAT ===== */
+
+iframe{
+    border-radius:10px;
+    box-shadow: 0 0 15px #9146FF;
+    transition: 0.3s;
+}
+
+iframe:hover{
+    box-shadow: 0 0 25px #9146FF;
+}
+
+/* ===== MIGLIORAMENTO HERO ===== */
+
+.hero{
+    margin: 40px;
+    padding: 30px;
+    background: linear-gradient(90deg, #9146FF, #18181b);
+    border-radius: 15px;
+}
+
+/* ===== TITOLI PIÙ BELLI ===== */
+
+h1, h2{
+    color:#9146FF;
+}
+
+/* ===== EFFETTO GENERALE BOTTONI ===== */
+
+.twitch-button:hover,
+.discord-button:hover,
+button:hover{
+    box-shadow: 0 0 10px #9146FF;
+}
