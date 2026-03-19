@@ -186,7 +186,7 @@ iframe:hover{
 
 /* ===== TITOLI PIÙ BELLI ===== */
 
-h1, h2{
+h2{
     color:#9146FF;
 }
 
@@ -205,3 +205,8 @@ button:hover{
 .hero p{
     color:white;
 }
+
+header h1{
+    color:white;
+}
+
