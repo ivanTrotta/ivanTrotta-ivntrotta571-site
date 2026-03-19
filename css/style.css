@@ -197,3 +197,11 @@ h1, h2{
 button:hover{
     box-shadow: 0 0 10px #9146FF;
 }
+
+.hero h1{
+    color:white;
+}
+
+.hero p{
+    color:white;
+}
