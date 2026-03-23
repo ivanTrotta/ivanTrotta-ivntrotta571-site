@@ -187,9 +187,9 @@ iframe:hover{
 
 /* ===== TITOLI PIÙ BELLI ===== */
 
-h1, h2{
+/*h1, h2{
     color:#9146FF;
-}
+}*/
 
 /* ===== EFFETTO GENERALE BOTTONI ===== */
 
@@ -199,3 +199,18 @@ button:hover{
     box-shadow: 0 0 10px #9146FF;
 }
 
+/* HEADER (nome sito sopra) */
+header h1{
+    color: white;
+}
+
+/* HERO (box viola sotto) */
+.hero h1,
+.hero p{
+    color: white;
+}
+
+/* TITOLI DELLE SEZIONI */
+section h2{
+    color:#9146FF;
+}
