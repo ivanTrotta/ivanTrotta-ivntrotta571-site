@@ -228,3 +228,16 @@ section h2{
     border-radius:50%;
     border:2px solid white;
 }
+
+#live-status{
+    font-weight:bold;
+    margin-top:5px;
+}
+
+.live{
+    color:#00ff88;
+}
+
+.offline{
+    color:red;
+}
