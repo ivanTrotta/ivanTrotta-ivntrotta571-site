@@ -8,6 +8,9 @@ body{
 header{
     background: linear-gradient(90deg, #9146FF, #772ce8);
     padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a{
@@ -37,7 +40,23 @@ nav a{
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    transition: relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#ffdd57;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+nav a:hover::after{
+    width:100%;
 }
 
 nav a:hover{
@@ -61,11 +80,12 @@ nav a:hover{
     padding: 15px;
     border-radius: 10px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .clip-box:hover{
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px #9146FF;
+    transform: scale(1.08);
+    box-shadow: 0px 0px 20px #9146FF;
 }
 
 .twitch-link{
@@ -105,8 +125,17 @@ border-radius:6px;
 cursor:pointer;
 }
 
-button:hover{
-background:#772ce8;
+.twitch-button,
+.discord-button{
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.twitch-button:hover,
+.discord-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #9146FF;
 }
 
 .about{
@@ -240,4 +269,17 @@ section h2{
 
 .offline{
     color:red;
+}
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
