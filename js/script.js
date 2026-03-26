@@ -23,3 +23,44 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+function likeClip(id, btn){
+    let span = btn.querySelector("span");
+    let count = localStorage.getItem(id) || 0;
+
+    count++;
+    localStorage.setItem(id, count);
+
+    span.innerText = count;
+}
+
+// carica i like salvati
+window.onload = function(){
+    document.querySelectorAll(".like-btn").forEach((btn, index) => {
+        let id = "clip" + (index + 1);
+        let saved = localStorage.getItem(id);
+
+        if(saved){
+            btn.querySelector("span").innerText = saved;
+        }
+    });
+}
+
+function searchClips(){
+    let input = document.getElementById("search").value.toLowerCase();
+    let clips = document.querySelectorAll(".clip-box");
+
+    clips.forEach(clip => {
+        let text = clip.innerText.toLowerCase();
+        clip.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+
+
+document.querySelectorAll(".views").forEach(v => {
+    v.innerText = Math.floor(Math.random() * 1000);
+});
+
+function toggleTheme(){
+    document.body.classList.toggle("light");
+}
