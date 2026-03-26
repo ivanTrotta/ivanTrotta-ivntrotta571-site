@@ -331,3 +331,31 @@ section h2{
 .clip-box:hover .clip-overlay{
     opacity:1;
 }
+
+.like-btn{
+    margin-top:10px;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    background:#9146FF;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.like-btn:active{
+    transform: scale(1.2);
+}
+
+.clip-overlay{
+    pointer-events: none;
+}
+
+.clip-overlay button{
+    pointer-events: auto;
+}
+
+body.light{
+    background: white;
+    color: black;
+}
