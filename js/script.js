@@ -77,3 +77,85 @@ window.addEventListener("load", () => {
 
     }, 1500); // tempo loading (1.5 secondi)
 });
+
+// 🎮 EASTER EGG KONAMI CODE
+const secretCode = [
+    "ArrowUp","ArrowUp",
+    "ArrowDown","ArrowDown",
+    "ArrowLeft","ArrowRight",
+    "ArrowLeft","ArrowRight",
+    "b","a"
+];
+
+let userInput = [];
+
+window.addEventListener("keydown", (e) => {
+    userInput.push(e.key);
+
+    if(userInput.length > secretCode.length){
+        userInput.shift();
+    }
+
+    if(JSON.stringify(userInput) === JSON.stringify(secretCode)){
+        activateEasterEgg();
+    }
+});
+
+function activateEasterEgg(){
+    alert("🎉 HAI SBLOCCATO LA MODALITÀ SEGRETA!");
+
+    document.body.style.background = "linear-gradient(45deg, red, purple, blue)";
+    
+    document.querySelectorAll(".clip-box").forEach(el => {
+        el.style.transform = "rotate(5deg) scale(1.1)";
+    });
+}
+
+function profileEasterEgg(){
+    const img = document.querySelector(".profile-pic");
+
+    // animazione rotazione + zoom
+    img.style.transition = "0.5s";
+    img.style.transform = "scale(1.5) rotate(360deg)";
+
+    // effetto glow
+    img.style.boxShadow = "0 0 30px #9146ff";
+
+    // messaggio
+    setTimeout(() => {
+        alert("😎 Hai trovato l'easter egg segreto!");
+    }, 300);
+
+    // torna normale dopo
+    setTimeout(() => {
+        img.style.transform = "scale(1) rotate(0deg)";
+        img.style.boxShadow = "none";
+    }, 1500);
+}
+
+let seconds = 0;
+
+setInterval(() => {
+    seconds++;
+
+    let min = Math.floor(seconds / 60);
+    let sec = seconds % 60;
+
+    let display = `${min}:${sec < 10 ? "0" + sec : sec}`;
+
+    const timer = document.getElementById("time-on-site");
+
+    if(timer){
+        timer.innerText = "⏱️ Tempo sul sito: " + display;
+    }
+
+}, 1000);
+
+const cursor = document.querySelector(".custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+    if(cursor){
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+    }
+});
