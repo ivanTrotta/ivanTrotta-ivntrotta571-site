@@ -1,3 +1,4 @@
+/* ===== STILE BASE DEL SITO ===== */
 body{
     font-family: Arial;
     background-color: #0e0e10;
@@ -5,6 +6,7 @@ body{
     text-align: center;
 }
 
+/* ===== HEADER FISSO CON EFFETTO GLASS ===== */
 header{
     background: rgba(20, 20, 20, 0.8); /* trasparente */
     backdrop-filter: blur(15px);       /* effetto vetro */
@@ -15,14 +17,17 @@ header{
     z-index: 1000;
 }
 
+/* Bordo inferiore dell'header */
 header{
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Ombra viola dell'header */
 header{
     box-shadow: 0 0 10px rgba(145, 70, 255, 0.3);
 }
 
+/* ===== LINK DEL MENU ===== */
 nav a{
     color: white;
     margin: 10px;
@@ -30,20 +35,24 @@ nav a{
     font-weight: bold;
 }
 
+/* Spaziatura sezione hero */
 .hero{
     margin: 40px;
 }
 
+/* Spaziatura sezione Twitch */
 .twitch{
     margin-top: 50px;
 }
 
+/* ===== FOOTER ===== */
 footer{
     margin-top: 60px;
     padding: 20px;
     background: #18181b;
 }
 
+/* ===== MENU CON EFFETTO SOTTOLINEATURA ===== */
 nav a{
     color: white;
     margin: 15px;
@@ -54,6 +63,7 @@ nav a{
     transition: relative;
 }
 
+/* Linea sotto i link */
 nav a::after{
     content:"";
     position:absolute;
@@ -65,18 +75,22 @@ nav a::after{
     transition:0.3s;
 }
 
+/* Animazione linea al passaggio del mouse */
 nav a:hover::after{
     width:100%;
 }
 
+/* Cambio colore link hover */
 nav a:hover{
     color:#ffdd57;
 }
 
+/* ===== SEZIONE CLIP ===== */
 .clips-container{
     margin-top: 50px;
 }
 
+/* Griglia clip */
 .clips-grid{
     display: flex;
     justify-content: center;
@@ -85,6 +99,7 @@ nav a:hover{
     margin-top: 30px;
 }
 
+/* Box singola clip */
 .clip-box{
     background: #18181b;
     padding: 15px;
@@ -93,16 +108,19 @@ nav a:hover{
     cursor: pointer;
 }
 
+/* Hover clip */
 .clip-box:hover{
     transform: scale(1.08);
     box-shadow: 0px 0px 20px #9146FF;
 }
 
+/* Link Twitch */
 .twitch-link{
 text-align:center;
 margin-top:15px;
 }
 
+/* Titoli principali */
 h1{
     text-align: center;
     margin-top: 30px;
@@ -112,7 +130,7 @@ h2{
     margin-top: 20px;
 }
 
-
+/* ===== FORM CONTATTI ===== */
 form{
 max-width:400px;
 margin:auto;
@@ -126,6 +144,7 @@ border-radius:6px;
 border:none;
 }
 
+/* Pulsanti generici */
 button{
 background:#9146FF;
 color:white;
@@ -135,6 +154,7 @@ border-radius:6px;
 cursor:pointer;
 }
 
+/* ===== BOTTONI SOCIAL ===== */
 .twitch-button,
 .discord-button{
     transition: all 0.3s ease;
@@ -148,6 +168,7 @@ cursor:pointer;
     box-shadow: 0 0 15px #9146FF;
 }
 
+/* ===== SEZIONE ABOUT ===== */
 .about{
 margin-top:40px;
 text-align:center;
@@ -156,6 +177,7 @@ margin-left:auto;
 margin-right:auto;
 }
 
+/* Bottone Twitch */
 .twitch-button{
 display:inline-block;
 margin-top:20px;
@@ -167,15 +189,18 @@ border-radius:8px;
 font-weight:bold;
 }
 
+/* Hover Twitch */
 .twitch-button:hover{
 background:#772ce8;
 }
 
+/* Hover pulsanti */
 button:hover{
 transform:scale(1.05);
 transition:0.2s;
 }
 
+/* Bottone Discord */
 .discord-button{
 display:inline-block;
 margin-top:20px;
@@ -187,10 +212,12 @@ border-radius:8px;
 font-weight:bold;
 }
 
+/* Hover Discord */
 .discord-button:hover{
 background:#4752c4;
 }
 
+/* ===== SEZIONE PROGRAMMA ===== */
 .schedule{
 margin-top:40px;
 text-align:center;
@@ -202,9 +229,7 @@ padding:20px;
 border-radius:10px;
 }
 
-
 /* ===== EFFETTI GLOW STREAM E CHAT ===== */
-
 iframe{
     border-radius:10px;
     box-shadow: 0 0 15px #9146FF;
