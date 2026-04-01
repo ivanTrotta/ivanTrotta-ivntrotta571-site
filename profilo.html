@@ -4,40 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Profilo - IvAnTrOtTa571</title>
+
+    <!-- Icona del sito -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- Collegamento al foglio di stile -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Cursore personalizzato -->
     <div class="custom-cursor"></div>
+
+    <!-- HEADER: contiene immagine profilo, titolo, stato live e meenu -->
      <header>
     <div class="header-container">
+
+        <!-- Immagine deò profilo cliccabile per easter egg -->
 <img src="img/profilo.png" class="profile-pic" onclick="profileEasterEgg()">    </div>
 
+         <!-- Titolo della pagina -->
     <h1>👤 Profilo</h1>
+
+         <!-- Stato della live aggiornato con JavaScript -->
           <p id="live-status">🔴 Offline</p>
+
+         <!-- Bottone per cambiare il tema scuro/chiaro -->
     <button onclick="toggleTheme()">🌙/☀️</button>
+
+         <!-- Barra di navigazione -->
     <nav>
         <a href="index.html">Home</a>
         <a href="clips.html">Clip</a>
         <a href="contatti.html">Contatti</a>
         <a href="profilo.html">Profilo</a>
+
+        <!-- Tempo trascorso sul sito aggiornato via JS -->
         <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
     </nav>
 </header>
 
+    <!-- CONTENITORE PRINCIPALE DEL PROFILO -->
 <section class="profile-container fade-in">
 
+    <!-- CARD DEL PROFILO -->
     <div class="profile-card">
 
+        <!-- Foto profilo grande -->
         <img src="img/profilo.png" class="profile-pic">
 
+        <!-- Nome utente -->
         <h2>IvAnTrOtTa571</h2>
 
+        <!-- Biografia -->
         <p class="bio">
             🎮 Streamer appassionato di gaming, clip divertenti e momenti epici!
         </p>
 
+        <!-- Statistiche del profilo, aggiornate dal file profilo.js -->
         <div class="stats">
             <div>
                 <h3 id="total-clips">0</h3>
@@ -59,7 +83,10 @@
 
 </section>
 
+    <!-- Script generali del sito -->
 <script src="js/script.js"></script>
+
+    <!-- Script dedicato alla pagina profilo (statistiche, easter egg ecc.) -->
 <script src="js/profilo.js"></script>
 </body>
 </html>
