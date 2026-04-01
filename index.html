@@ -4,45 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <title>IvAnTrOtTa571 - Twitch</title>
+
+    <!-- Icona del sito -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- Collegamento al file CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
     
 <body>
+    <!-- cURSORE PERSONALIZZATO -->
         <div class="custom-cursor"></div>
+
+    <!-- Schermata di caricamento -->
 <div id="loader">
     <h1>⚽ Loading...</h1>
 </div>
+
+    <!--  INTESTAZIONE DEL SITO -->
     <header>
         <div class="header-container">
+
+            <!-- Immagine profilo -->
             <img src="img/profilo.png" class="profile-img">
+
+            <!-- Titolo principale -->
         <h1>⚽ IvAnTrOtTa571 Twitch Community ⚽</h1>
+
+            <!-- Stato live aggiornato con JS -->
         <p id="live-status">🔴 Offline</p>
+
+            <!-- Bottone per cambiare tema (chiaro/scuro) -->
         <button onclick="toggleTheme()">🌙/☀️</button>
         </div>
-        
+
+        <!-- Menù di navigazione -->
         <nav>
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
             <a href="profilo.html">Profilo</a>
+
+            <!-- Tempo trascorso sul sito (aggiornato da JS) -->
             <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
         </nav>
     </header>
 
+    <!-- Avviso sito in sviluppo -->
     <p style="color:orange;font-weight:bold;">
     🚧 Sito attualmente in fase di sviluppo 🚧
     </p>
 
+    <!-- Sezione Hero principale -->
     <section class="hero fade-in">
         <h2>Reaction alle partite ⚽ e Just Chatting 🎙️</h2>
             <p>Seguimi su Twitch per live e clip!</p>
     </section>
 
+    <!-- SEZIONE TWITCH -->
     <section class="twitch fade-in">
 
         <h2>🔴 Stream Live</h2>
 
+        <!-- Player Twitch incorporato -->
          <iframe
         src="https://player.twitch.tv/?channel=ivantrotta571&&parent=ivantrotta.github.io"
         height="400"
@@ -50,6 +74,7 @@
         allowfullscreen>
         </iframe>
 
+        <!-- Sezione "Chi sono" -->
         <section class="about fade-in">
 
         <h2>Chi sono</h2>
@@ -60,6 +85,7 @@
         chiacchiere con la chat e tanto altro.
         </p>
 
+            <!-- Programma live -->
         <section class="schedule fade-in">
             <h2>Quando sono live</h2>
 
@@ -76,14 +102,17 @@
 
     </section>
 
+        <!-- Pulsante per aprire Twitch -->
        <a class="twitch-button fade-in" href="https://www.twitch.tv/ivantrotta571" target="_blank">
         Guarda il canale su Twitch
         </a>
 
+        <!-- Pulsante per entrare su Discord -->
         <a class="discord-button fade-in" href="https://discord.gg/hfZ5FuYd" target="_blank">
         Unisciti al Discord
         </a>
-        
+
+        <!-- Chat Twitch incorporata -->
         <h2>💬 Chat della live</h2>
 
         <iframe
@@ -94,10 +123,12 @@
 
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2026 IvAnTrOtTa571</p>
     </footer>
 
+    <!-- JavaScript esterno -->
         <script src="js/script.js"></script>
 
     </body>
