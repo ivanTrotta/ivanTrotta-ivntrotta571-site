@@ -3,57 +3,82 @@
 
 <head>
 <title>Contatti</title>
+
+    <!-- Collega il foglio di stile principale -->
 <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icona del sito -->
 <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
+    <!-- Cursore personalizzato -->
     <div class="custom-cursor"></div>
 
-
+<!-- HEADER DELLA PAGINA -->
 <header>
          <div class="header-container">
+
+             <!-- Immmagine del profilo -->
             <img src="img/profilo.png" class="profile-img">
         </div>
+
+    <!-- titolo della pagina -->
 <h1>Contattami</h1>
+
+    <!-- Stato della live aggiornato via javaScript -->
     <p id="live-status">🔴 Offline</p>
+
+    <!-- Bottone per il cambio tema (chiaro/scuro) -->
 <button onclick="toggleTheme()">🌙/☀️</button>
 
+    <!-- Menu di navigazione -->
          <nav>
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
             <a href="profilo.html">Profilo</a>
+
+             <!-- Tempo trascorso sul sito (via JS) -->
             <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
         </nav>
          
 </header>
 
+    <!-- SEZIONE PRINCIPALE DELLA PAGINA CONTATTI -->
 <section>
 
+    <!-- Introduzione -->
 <p>Vuoi collaborare con me o scrivermi un messaggio?</p>
 
+    <!-- FORM DI CONTATTO (al momento non invia, servirà JS o backend) -->
 <form>
 
+    <!-- Campo nome -->
 <label>Nome</label><br>
 <input type="text"><br><br>
 
+    <!-- Campo email -->
 <label>Email</label><br>
 <input type="email"><br><br>
 
+    <!-- Campo messaggio -->
 <label>Messaggio</label><br>
 <textarea rows="5"></textarea><br><br>
 
+    <!-- Bottone non funzionante (solo estetico) -->
 <button type="button">Invia</button>
 
 </form>
 
 </section>
 
+    <!-- Footer -->
 <footer>
 <p>© 2026 IVNTROTTA571</p>
 </footer>
 
+    <!-- Script generali del sito (tema, cursore, tempo sul sito, stato live) -->
              <script src="js/script.js"></script>
 
 </body>
