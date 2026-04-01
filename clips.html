@@ -4,42 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Clip - IvAnTrOtTa571</title>
+
+    <!-- Icona del sito -->
     <link rel="icon" href="favicon.ico">
+
+    <!-- Foglio di stile generale -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Cursore personalizzato -->
     <div class="custom-cursor"></div>
 
+    <!-- HEADER -->
     <header>
         <div class="header-container">
+
+            <!-- Immagine profilo nel header -->
             <img src="img/profilo.png" class="profile-img">
         </div>
+
+        <!-- Titolo pagina -->
         <h1>🎬 Clip migliori della community</h1>
+
+        <!-- Stato live aggiornato da script.js -->
         <p id="live-status">🔴 Offline</p>
+
+        <!-- Bottone cambio tema -->
         <button onclick="toggleTheme()">🌙/☀️</button>
 
-
+<!-- Barra di navigazione -->
         <nav>
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
             <a href="profilo.html">Profilo</a>
+
+            <!-- Timer tempo trascorso sul sito -->
             <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
         </nav>
 
     </header>
 
+    <!-- CONTENITORE DELLE CLIP -->
     <section class="clips-container fade-in">
 
+        <!-- Titolo sezione -->
 <h2>🎬 Top Clip della Community</h2>
 
+        <!-- Barra di ricerca clip -->
         <input type="text" id="search" placeholder="Cerca clip..." onkeyup="searchClips()">
 
+        <!-- Totale views (aggiornabile con JS) -->
         <p>👀 <span class="views">0</span> views</p>
-        
+
+        <!-- GRIGLIA DELLE CLIP -->
 <div class="clips-grid">
 
+     <!-- OGNI BOX CONTIENE: iframe Twitch + overlay nome + tasto like -->
+
+    <!-- CLIP 1 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=ThankfulUnsightlyTrollANELE-Cm-osCgoUPjQjj3a&parent=ivantrotta.github.io"
@@ -54,7 +78,7 @@
     </div>
 </div>
 
-
+<!-- CLIP 2 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=AgileEagerMoonNotLikeThis-6r99NZRoNT11imNU&parent=ivantrotta.github.io"
@@ -69,6 +93,7 @@
     </div>
 </div>
 
+    <!-- CLIP 3 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=NeighborlyRelatedEmuFloof-MJvL1ejgvdUYMxVr&parent=ivantrotta.github.io"
@@ -81,6 +106,7 @@
 
 </div>
 
+    <!-- CLIP 4 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=PleasantSplendidLocustSwiftRage-gXeWxjtZBAp_0mif&parent=ivantrotta.github.io"
@@ -95,6 +121,7 @@
     </div>
 </div>
 
+    <!-- CLIP 5 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=HeadstrongElatedPresidentStrawBeary-taWuVQ5kqNynAGjH&parent=ivantrotta.github.io"
@@ -109,6 +136,7 @@
     </div>
 </div>
 
+    <!-- CLIP 6 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=SillyRelievedElkArgieB8-GP8ET5t7h801BoWx&parent=ivantrotta.github.io"
@@ -123,6 +151,7 @@
     </div>
 </div>
 
+    <!-- CLIP 7 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=GoldenPhilanthropicDillPanicVis-lUmICppRdfUj9Gcq&parent=ivantrotta.github.io"
@@ -137,6 +166,7 @@
     </div>
 </div>
 
+    <!-- CLIP 8 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=AliveMoralCarabeefDancingBanana-Yfbmj3fJ9V4Jwjjp&parent=ivantrotta.github.io"
@@ -151,6 +181,7 @@
     </div>
 </div>
 
+    <!-- CLIP 9 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=VenomousNastyKittenMoreCowbell-znKesdOMnyPS6zX1&parent=ivantrotta.github.io"
@@ -165,6 +196,7 @@
     </div>
 </div>
 
+    <!-- CLIP 10 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=BusyMoldyOpossumKeepo-DkMAjLnPj1nnB3Df&parent=ivantrotta.github.io"
@@ -179,6 +211,7 @@
     </div>
 </div>
 
+    <!-- CLIP 11 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=PrettiestWiseLegNotLikeThis-rxa5N2V8fuUeAIW5&parent=ivantrotta.github.io"
@@ -193,6 +226,7 @@
     </div>
 </div>
 
+    <!-- CLIP 12 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=CrunchyRudeCiderNotATK-RwXoffD6d5Ql5ZZl&parent=ivantrotta.github.io"
@@ -207,6 +241,7 @@
     </div>
 </div>
 
+    <!-- CLIP 13 -->
 <div class="clip-box">
     <iframe
     src="https://clips.twitch.tv/embed?clip=PluckyFunnyAxePastaThat-HhEFUbvvTGl4SzmV&parent=ivantrotta.github.io"
@@ -222,10 +257,11 @@
 </div>
 
 
-</div>
+</div> <!-- fine .clips-grid -->
 
 </section>
 
+    <!-- Script generale del sito -->
     <script src="js/script.js"></script>
 </body>
 
