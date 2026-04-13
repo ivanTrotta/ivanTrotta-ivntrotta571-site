@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contatti</title>
 
     <!-- Collega il foglio di stile principale -->
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+    <div id="particles"></div>
     <!-- Cursore personalizzato -->
     <div class="custom-cursor"></div>
 
@@ -24,7 +26,7 @@
         </div>
 
     <!-- titolo della pagina -->
-<h1>Contattami</h1>
+<h1 class="glow-title">Contattami</h1>
 
     <!-- Stato della live aggiornato via javaScript -->
     <p id="live-status">🔴 Offline</p>
@@ -33,13 +35,16 @@
 <button onclick="toggleTheme()">🌙/☀️</button>
 
     <!-- Menu di navigazione -->
-         <nav>
+          <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav id="mobile-nav">
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
             <a href="profilo.html">Profilo</a>
 
-             <!-- Tempo trascorso sul sito (via JS) -->
+            <!-- Timer tempo trascorso sul sito -->
             <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
         </nav>
          
