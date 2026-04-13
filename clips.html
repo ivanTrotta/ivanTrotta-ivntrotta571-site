@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clip - IvAnTrOtTa571</title>
 
     <!-- Icona del sito -->
@@ -13,6 +14,7 @@
 </head>
 
 <body>
+    <div id="particles"></div>
     <!-- Cursore personalizzato -->
     <div class="custom-cursor"></div>
 
@@ -25,7 +27,7 @@
         </div>
 
         <!-- Titolo pagina -->
-        <h1>🎬 Clip migliori della community</h1>
+        <h1 class="glow-title">🎬 Clip migliori della community</h1>
 
         <!-- Stato live aggiornato da script.js -->
         <p id="live-status">🔴 Offline</p>
@@ -34,7 +36,10 @@
         <button onclick="toggleTheme()">🌙/☀️</button>
 
 <!-- Barra di navigazione -->
-        <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav id="mobile-nav">
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
