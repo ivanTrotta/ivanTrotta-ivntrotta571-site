@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>IvAnTrOtTa571 - Twitch</title>
 
@@ -13,6 +14,7 @@
 </head>
     
 <body>
+    <div id="particles"></div>
     <!-- cURSORE PERSONALIZZATO -->
         <div class="custom-cursor"></div>
 
@@ -29,7 +31,7 @@
             <img src="img/profilo.png" class="profile-img">
 
             <!-- Titolo principale -->
-        <h1>⚽ IvAnTrOtTa571 Twitch Community ⚽</h1>
+        <h1 class="glow-title">⚽ IvAnTrOtTa571 Twitch Community ⚽</h1>
 
             <!-- Stato live aggiornato con JS -->
         <p id="live-status">🔴 Offline</p>
@@ -39,13 +41,16 @@
         </div>
 
         <!-- Menù di navigazione -->
-        <nav>
+         <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav id="mobile-nav">
             <a href="index.html">Home</a>
             <a href="clips.html">Clip</a>
             <a href="contatti.html">Contatti</a>
             <a href="profilo.html">Profilo</a>
 
-            <!-- Tempo trascorso sul sito (aggiornato da JS) -->
+            <!-- Timer tempo trascorso sul sito -->
             <p id="time-on-site">⏱️ Tempo sul sito: 0s</p>
         </nav>
     </header>
@@ -120,6 +125,14 @@
         height="400"
         width="350">
         </iframe>
+
+        <div id="game-box" style="display:none;">
+            <h2>🎮 CLICK CHALLENGE</h2>
+            <p>Tempo: <span id="time">10</span>s</p>
+            <p>Punti: <span id="score">0</span></p>
+            <button id="click-btn" style="position:absolute;">PRENDIMI!</button>
+            <p>🏆 Record: <span id="record">0</span></p>
+        </div>
 
     </section>
 
