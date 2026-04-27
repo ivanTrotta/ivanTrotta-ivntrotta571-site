@@ -490,6 +490,15 @@ function enableShakeRage(){
 
     });
 
+    if (typeof DeviceMotionEvent !== "undefined" && typeof DeviceMotionEvent.requestPermission === "function") {
+    DeviceMotionEvent.requestPermission().then(permissionState => {
+        if (permissionState === "granted") {
+            enableShakeRage();
+        }
+    });
+} else {
+    enableShakeRage();
+}
 }
 
 // attiva all'avvio
