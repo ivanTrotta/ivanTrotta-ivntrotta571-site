@@ -348,3 +348,149 @@ document.querySelector(".profile-img").addEventListener("click", () => {
     }
 
 });
+
+// ===== RAGE MODE =====
+
+(function(){
+
+    let rageWord = "";
+    let rageActive = false;
+
+    document.addEventListener("keydown", function(e){
+
+        rageWord += e.key.toLowerCase();
+
+        if(rageWord.length > 10){
+            rageWord = rageWord.slice(-10);
+        }
+
+        if(rageWord.includes("rage")){
+            activateRageMode();
+            rageWord = "";
+        }
+
+    });
+
+    function activateRageMode(){
+
+        if(rageActive) return;
+        rageActive = true;
+
+        document.body.classList.add("rage-mode");
+
+        const text = document.getElementById("rage-text");
+
+        if(text){
+            text.style.display = "block";
+        }
+
+        const phrases = [
+            "😡 MA CHE STAI FACENN??",
+            "💀 MA VATT A DORM",
+            "🤬 NGUL A MAMMT!",
+            "🔥 NON È POSSIBILE STA COSA",
+            "😤 TI STO GUARDANDO EH",
+            "👀 ESCI SUBITO DAL SITO",
+            "💣 STO ESPLODENDO",
+            "😈 TI HO SGAMATO"
+        ];
+
+        let i = 0;
+
+        setInterval(() => {
+            if(text){
+                text.innerText = phrases[i % phrases.length];
+                i++;
+            }
+        }, 1200);
+
+        let flash = document.createElement("div");
+        flash.classList.add("flash");
+
+        document.body.appendChild(flash);
+
+        setTimeout(() => {
+        flash.remove();
+        }, 500);
+
+        let audio = new Audio("https://www.myinstants.com/media/sounds/vine-boom.mp3");
+        audio.volume = 0.5;
+        audio.play();
+
+        if(text){
+        text.classList.add("glitch");
+        }
+
+        crazyCursor();
+    }
+
+})();
+
+// ===== CURSORE IMPAZZITO =====
+
+let cursor2 = document.querySelector(".custom-cursor");
+let mouseX = 0;
+let mouseY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function crazyCursor(){
+
+    if(!cursor) return;
+
+    let offsetX = (Math.random() * 20) - 10;
+    let offsetY = (Math.random() * 20) - 10;
+
+    cursor.style.left = (mouseX + offsetX) + "px";
+    cursor.style.top = (mouseY + offsetY) + "px";
+
+    requestAnimationFrame(crazyCursor);
+}
+
+// ===== RAGE MOBILE SHAKE =====
+
+function enableShakeRage(){
+
+    if(!isMobile()) return;
+
+    let lastX = null;
+    let lastY = null;
+    let lastZ = null;
+
+    let shakeThreshold = 15;
+
+    window.addEventListener("devicemotion", function(event){
+
+        let acc = event.accelerationIncludingGravity;
+
+        if(!acc) return;
+
+        let x = acc.x;
+        let y = acc.y;
+        let z = acc.z;
+
+        if(lastX !== null){
+
+            let deltaX = Math.abs(x - lastX);
+            let deltaY = Math.abs(y - lastY);
+            let deltaZ = Math.abs(z - lastZ);
+
+            if(deltaX > shakeThreshold || deltaY > shakeThreshold || deltaZ > shakeThreshold){
+                activateRageMode();
+            }
+
+        }
+
+        lastX = x;
+        lastY = y;
+        lastZ = z;
+
+    });
+
+}
+
+// attiva all'avvio
+window.addEventListener("load", enableShakeRage);
